@@ -17,7 +17,11 @@ function validarDatos(evt) {
     (evt.target.genero.value == "") |
     (evt.target.nombre.value == "") 
   ) {
-    info.innerHTML = `<p class='text-danger'>Debe completar todos los campos</p>`;
+    Swal.fire({
+      icon: 'error',
+      title: 'Datos incompletos',
+      text: 'Debe completar todos los campos',
+    })
   } else if (localStorage.getItem(evt.target.correo.value)) {
     info.innerHTML = `<p class='text-danger'>Ya existe una cuenta con este correo</p>`;
   } else if (evt.target.contrasena.value !== evt.target.confirmacion.value){
@@ -30,71 +34,13 @@ function validarDatos(evt) {
       'contrasena': evt.target.confirmacion.value
     };
       localStorage.setItem(evt.target.correo.value, JSON.stringify(cliente));
-      info.innerHTML = `
-      <div>
-        <p class='text-success'>El usuario se ha registrado con éxito.</p>
-        <p class='text-success'>Ahora debe iniciar sesión para acceder a su plan de entrenamiento</p>
-        <a href="./inicia_sesion.html" class="btn btn-sm btn-outline-warning"
-        >Inicia Sesión</a
-      >
-      </div>`;
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'El usuario se ha registrado con éxito. Ahora debe iniciar sesión para acceder a su plan',
+      })
   }
 }
-
-function saludar(persona) {
-  if (persona.genero == "F") {
-    info.innerHTML = `
-    <h3 class='text-warning'>Bienvenida ${persona.nombre}!</h3>`
-  } else {
-    info.innerHTML = `
-    <h3 class='text-warning'>Bienvenido ${persona.nombre}!</h3>`
-  }
-}
-
-function recomendacion(persona){
-  saludar(persona);
-  if(persona.imc < 18.5){
-      info.innerHTML += `
-      <p>De acuerdo a tus datos, debes acompañar el siguiente plan con una dieta hipercalórica</p>
-      <h3> Este es tu plan </h3>
-      <ul class='list-unstyled'>
-        <li>4x10 abdominales cortos</li>
-        <li>4x10 biceps con mancuernas</li>
-        <li>4x10 triceps en polea</li>
-        <li>4x20 sentadillas con peso</li>
-      </ul>
-      `
-  }
-  if(persona.imc >= 18.5 && persona.imc <= 24.9){
-      info.innerHTML += `
-      <h3> Este es tu plan </h3>
-      <ul class='list-unstyled'>
-        <li>3x10 abdominales cortos</li>
-        <li>3x10 biceps con mancuernas</li>
-        <li>3x10 triceps en polea</li>
-        <li>3x20 sentadillas con peso</li>
-      </ul>
-      `
-  }
-  if(persona.imc > 24.9 && persona.imc < 30){
-      info.innerHTML += `
-      <p>De acuerdo a tus datos, debes acompañar el siguiente plan con una dieta hipocalórica</p>
-      <h3> Este es tu plan </h3>
-      <ul class='list-unstyled'>
-        <li>3x10 abdominales cortos</li>
-        <li>3x10 biceps con mancuernas</li>
-        <li>3x10 triceps en polea</li>
-        <li>3x20 sentadillas con peso</li>
-        <li>30 min cinta</li>
-      </ul>
-      `
-  }
-  if(persona.imc >= 30){
-      info.innerHTML += `
-      <p>Te sugerimos hacer una consulta médica antes de comenzar el entrenamiento</p>
-      `
-  };
-};
 
 // Eventos
 form.addEventListener("submit", submitHandler);

@@ -19,7 +19,11 @@ function validarDatos(evt) {
     (evt.target.correo.value == "") |
     (evt.target.contrasena.value == "")
   ) {
-    info.innerHTML = `<p class='text-danger'>Debe completar todos los campos</p>`;
+    Swal.fire({
+      icon: 'error',
+      title: 'Datos incompletos',
+      text: 'Debe completar todos los campos',
+    })
   } else
   if (!localStorage.getItem(evt.target.correo.value)) {
     info.innerHTML = `<p class='text-danger'>Correo no regisgtrado o incorrecto</p>`

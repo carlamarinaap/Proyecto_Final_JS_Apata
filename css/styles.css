@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=Frijole&display=swap"); /*MIXINS*/
+@import url("https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=Frijole&display=swap");
+/*MIXINS*/
 /*GENERAL*/
 * {
   padding: 0;
@@ -28,6 +29,19 @@ li a i {
 }
 li:hover i {
   transform: scale(1.15);
+}
+
+#swal2-title {
+  font-family: "Coda", cursive;
+  font-weight: 200;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #ffc107;
+  color: #000000;
+}
+.swal2-styled.swal2-confirm:focus {
+  outline: 3px solid #ffc107;
 }
 
 /*HEADER*/
@@ -436,3 +450,5 @@ h1 span, h2 span, h3 span, button span, a span {
     height: auto;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */

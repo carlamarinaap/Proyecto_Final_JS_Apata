@@ -30,3 +30,15 @@ li {
     transform: scale(1.15);
   }
 }
+
+#swal2-title {
+  @include fuente("Coda", 200);
+  font-size: 1.5em;
+}
+.swal2-styled.swal2-confirm {
+  background-color: map-get($colores, amarillo);
+  color: map-get($colores, negro);
+  &:focus {
+    outline: 3px solid map-get($colores, amarillo);
+  }
+}
