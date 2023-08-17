@@ -16,7 +16,11 @@ function validarDatos(evt) {
     (evt.target.altura.value == "") |
     (evt.target.peso.value == "")
   ) {
-    plan.innerHTML = `<p class='text-danger text-center'>Debe completar todos los campos</p>`;
+    Swal.fire({
+      icon: 'error',
+      title: 'Datos incompletos',
+      text: 'Debe completar todos los campos',
+    })
   } else if (localStorage.getItem(evt.target.correo.value)) {
       form.setAttribute("class", "d-none");
       plan.innerHTML = `
