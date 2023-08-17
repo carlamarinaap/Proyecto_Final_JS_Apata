@@ -52,57 +52,49 @@ function saludar(persona) {
 }
 
 function recomendacion(persona){
-  saludar(persona)
-    if(persona.imc < 18.5){
-      return (
-        info.innerHTML += `
-        <p>De acuerdo a tus datos, debes acompañar el siguiente plan con una dieta hipercalórica</p>
-        <h3> Este es tu plan </h3>
-        <ul class='list-unstyled'>
-          <li>3x10 abdominales cortos</li>
-          <li>3x10 biceps con mancuernas</li>
-          <li>3x10 triceps en polea</li>
-          <li>3x20 sentadillas con peso</li>
-        </ul>
-        `
-      );
-    }
-    if(persona.imc >= 18.5 && persona.imc <= 24.9){
-      return (
-        info.innerHTML += `
-        <h3> Este es tu plan </h3>
-        <ul class='list-unstyled'>
-          <li>3x10 abdominales cortos</li>
-          <li>3x10 biceps con mancuernas</li>
-          <li>3x10 triceps en polea</li>
-          <li>3x20 sentadillas con peso</li>
-        </ul>
-        `
-      );
-    }
-    if(persona.imc > 24.9 && persona.imc < 30){
-      return (
-        info.innerHTML += `
-        <p>De acuerdo a tus datos, debes acompañar el siguiente plan con una dieta hipocalórica</p>
-        <h3> Este es tu plan </h3>
-        <ul class='list-unstyled'>
-          <li>3x10 abdominales cortos</li>
-          <li>3x10 biceps con mancuernas</li>
-          <li>3x10 triceps en polea</li>
-          <li>3x20 sentadillas con peso</li>
-          <li>30 min cinta</li>
-        </ul>
-        `
-      );
-    }
-    if(persona.imc >= 30){
-      return (
-        info.innerHTML += `
-        <p>Te sugerimos hacer una consulta médica antes de comenzar el entrenamiento</p>
-        `
-      );
-    }
+  saludar(persona);
+  if(persona.imc < 18.5){
+      info.innerHTML += `
+      <p>De acuerdo a tus datos, debes acompañar el siguiente plan con una dieta hipercalórica</p>
+      <h3> Este es tu plan </h3>
+      <ul class='list-unstyled'>
+        <li>4x10 abdominales cortos</li>
+        <li>4x10 biceps con mancuernas</li>
+        <li>4x10 triceps en polea</li>
+        <li>4x20 sentadillas con peso</li>
+      </ul>
+      `
+  }
+  if(persona.imc >= 18.5 && persona.imc <= 24.9){
+      info.innerHTML += `
+      <h3> Este es tu plan </h3>
+      <ul class='list-unstyled'>
+        <li>3x10 abdominales cortos</li>
+        <li>3x10 biceps con mancuernas</li>
+        <li>3x10 triceps en polea</li>
+        <li>3x20 sentadillas con peso</li>
+      </ul>
+      `
+  }
+  if(persona.imc > 24.9 && persona.imc < 30){
+      info.innerHTML += `
+      <p>De acuerdo a tus datos, debes acompañar el siguiente plan con una dieta hipocalórica</p>
+      <h3> Este es tu plan </h3>
+      <ul class='list-unstyled'>
+        <li>3x10 abdominales cortos</li>
+        <li>3x10 biceps con mancuernas</li>
+        <li>3x10 triceps en polea</li>
+        <li>3x20 sentadillas con peso</li>
+        <li>30 min cinta</li>
+      </ul>
+      `
+  }
+  if(persona.imc >= 30){
+      info.innerHTML += `
+      <p>Te sugerimos hacer una consulta médica antes de comenzar el entrenamiento</p>
+      `
   };
+};
 
 // Eventos
 form.addEventListener("submit", submitHandler);

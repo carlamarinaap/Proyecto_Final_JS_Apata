@@ -30,8 +30,8 @@ const crearCard = (profe) => `
 
 const cargarProfeElegido = (evt) => {
   listaProfesores.innerHTML = ''
-  const upperCase = evt.target.value.toUpperCase();
-  cargarStaff(upperCase)
+  const eleccion = evt.target.value.toUpperCase();
+  cargarStaff(eleccion)
 }
 
 // Eventos
