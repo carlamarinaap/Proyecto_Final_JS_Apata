@@ -1,0 +1,23 @@
+
+
+/*HEADER*/
+header {
+  background-image: linear-gradient(map-get($colores,negro),map-get($colores,op_100));
+}
+.navbar-nav {
+  li {
+    padding: 0 10px;
+    .activa {
+      color: map-get($colores, amarillo) ;
+    }
+    a {
+      color: map-get($colores, blanco);
+      transition: color 0.2s; 
+      &:hover {
+        color: map-get($colores, amarillo);
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,438 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=Frijole&display=swap"); /*MIXINS*/
+/*GENERAL*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Coda", cursive;
+  font-weight: 200;
+  color: #FFFFFF;
+  outline: none;
+  transition: outline 0.2s;
+}
+*:focus-visible {
+  outline: 3px solid #ffc107;
+}
+
+body {
+  background-color: #000000;
+}
+
+li a {
+  text-decoration: none;
+}
+li a i {
+  transform: scale(1);
+  transition: all 0.2s;
+}
+li:hover i {
+  transform: scale(1.15);
+}
+
+/*HEADER*/
+header {
+  background-image: linear-gradient(#000000, rgba(0, 0, 0, 0));
+}
+
+.navbar-nav li {
+  padding: 0 10px;
+}
+.navbar-nav li .activa {
+  color: #ffc107;
+}
+.navbar-nav li a {
+  color: #FFFFFF;
+  transition: color 0.2s;
+}
+.navbar-nav li a:hover {
+  color: #ffc107;
+}
+
+/*CABECERA*/
+.bodyClases .main .img_bodyLinks, .bodyStaff .main .img_bodyLinks, .bodySedes .main .img_bodyLinks, .bodyContacto .main .img_bodyLinks, .bodyInicioSesion .main .img_bodyLinks {
+  position: absolute;
+  top: 0px;
+  z-index: -10;
+}
+.bodyClases .main .img_bodyLinks img, .bodyStaff .main .img_bodyLinks img, .bodySedes .main .img_bodyLinks img, .bodyContacto .main .img_bodyLinks img, .bodyInicioSesion .main .img_bodyLinks img {
+  width: 100vw;
+}
+.bodyClases .main .cabecera, .bodyStaff .main .cabecera, .bodySedes .main .cabecera, .bodyContacto .main .cabecera, .bodyInicioSesion .main .cabecera {
+  position: relative;
+  text-align: center;
+}
+.bodyClases h1, .bodyStaff h1, .bodySedes h1, .bodyContacto h1, .bodyInicioSesion h1 {
+  padding: 10vw 0;
+  font-size: 60px;
+}
+
+/*INDEX*/
+.bodyInicio {
+  height: 100vh;
+  background-image: url("../img/wallpaper.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bodyInicio .seccion1 {
+  animation: animacion1 1s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+}
+.bodyInicio .seccion1 h3 {
+  padding: 3rem 0px;
+}
+.bodyInicio .main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  height: 75vh;
+  align-items: center;
+}
+
+.espaciado {
+  display: block;
+  letter-spacing: 20px;
+}
+
+.form-control, .form-select, textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  outline: none;
+  transition: all 0.2s;
+}
+.form-control:focus, .form-select:focus, textarea:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  outline: none;
+  transition: all 0.2s;
+  outline: 3px solid #ffc107;
+}
+
+.seccion2 {
+  animation: animacion2 1s ease;
+}
+
+@keyframes animacion1 {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes animacion2 {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.bodyClases .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vista_mobile {
+  display: none;
+}
+
+.menu_sedes {
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+}
+.menu_sedes h3, .menu_sedes p {
+  text-align: center;
+  color: #ffc107;
+}
+.menu_sedes .vista_desktop {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.menu_sedes .vista_desktop li a {
+  color: #FFFFFF;
+}
+
+/*STAFF*/
+.staff_container {
+  overflow: hidden;
+  margin: 1.5rem auto;
+  width: 240px;
+  height: 400px;
+}
+.staff_container .img_container {
+  position: absolute;
+}
+.staff_container .img_container img {
+  border-radius: 0.3rem;
+  border: 1px solid #FFFFFF;
+  width: 240px;
+  aspect-ratio: 0.6;
+  object-fit: cover;
+}
+.staff_container .tarjetaInterna {
+  border-radius: 0.3rem;
+  border: 1px solid #FFFFFF;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  position: relative;
+  transform: translateY(320px);
+  transition: all 0.3s;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.staff_container:hover .tarjetaInterna {
+  transform: translateY(50px);
+}
+
+/*SEDES*/
+.bg_img {
+  border-radius: 0.3rem;
+  border: 1px solid #FFFFFF;
+  background-image: url("../img/gimnasios.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 3rem auto;
+}
+
+.sede {
+  border-radius: 0.3rem;
+  border: 1px solid #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+.sede p {
+  margin: 0;
+}
+
+iframe {
+  border-radius: 0.3rem;
+  border: 1px solid #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.bodyContacto {
+  height: 100vh;
+}
+.bodyContacto .main {
+  height: 90vh;
+}
+
+.comentarios {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.oficinas {
+  padding: 1rem;
+  width: 50%;
+  margin: 2rem auto;
+  border-radius: 0.3rem;
+  border: 1px solid #FFFFFF;
+}
+.oficinas ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.oficinas ul li {
+  text-align: center;
+}
+
+.bodyInicioSesion {
+  height: 100vh;
+}
+.bodyInicioSesion .main {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+.bodyInicioSesion .form_inicioSesion {
+  margin: 0 auto;
+  width: 50vw;
+  margin-bottom: 5vh;
+}
+
+footer {
+  padding-top: 20px;
+}
+footer p {
+  padding-left: 4rem;
+}
+
+/*FUENTES Y TAMAÑOS*/
+h1 {
+  font-size: calc(4rem + 2.2vw);
+}
+
+h2 {
+  font-size: calc(1.325rem + 2.5vw);
+}
+
+h1, h2, h3, button, a {
+  text-align: center;
+  font-family: "Frijole", cursive;
+  font-weight: 200;
+}
+h1 span, h2 span, h3 span, button span, a span {
+  font-family: "Frijole", cursive;
+  font-weight: 200;
+}
+
+@media (max-width: 767px) {
+  /*GENERAL*/
+  .bodyInicio,
+  .bg_img {
+    background-image: none;
+    border: none;
+  }
+  .img_bodyLinks {
+    display: none;
+  }
+  .bodyInicio .main, .bodyClases .main {
+    height: auto;
+  }
+  /*HEADER*/
+  .navbar-nav li {
+    margin: 1rem;
+  }
+  .navbar-nav li a {
+    font-size: 20px;
+  }
+  /*INDEX*/
+  .seccion1 h1 {
+    display: none;
+  }
+  .bodyInicio .main {
+    display: block;
+  }
+  /*CLASES*/
+  .clases {
+    display: none;
+  }
+  .bodyClases .main {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .menu_sedes h3, .menu_sedes .vista_desktop {
+    display: none;
+  }
+  .menu_sedes p {
+    font-size: 18px;
+  }
+  .vista_mobile {
+    animation: desplazo 1s ease;
+    display: flex;
+    padding: 0px;
+    list-style: none;
+    flex-direction: column;
+    text-align: center;
+  }
+  .vista_mobile li {
+    padding: 3rem 0px;
+  }
+  .vista_mobile li a {
+    font-size: 30px;
+    color: #FFFFFF;
+  }
+  @keyframes desplazo {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  /*STAFF*/
+  .staff_container {
+    border-radius: 0.3rem;
+    border: 1px solid #FFFFFF;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+  }
+  .staff_container .img_container {
+    align-self: center;
+    position: static;
+    height: 350px;
+  }
+  .staff_container .img_container img {
+    width: 200px;
+    border: none;
+  }
+  .staff_container .tarjetaInterna {
+    height: auto;
+    transform: none;
+    border: none;
+  }
+  .staff_container .tarjetaInterna span {
+    display: none;
+  }
+  .staff_container:hover .tarjetaInterna {
+    transform: none;
+  }
+  /*CONTACTO*/
+  .comentarios {
+    width: 80%;
+  }
+  .oficinas {
+    width: 80vw;
+  }
+  .oficinas ul {
+    flex-direction: column;
+  }
+  /*INICIO SESION*/
+  .bodyInicioSesion .cabecera {
+    margin-bottom: 10vh;
+  }
+  .bodyInicioSesion .form_inicioSesion {
+    width: 75vw;
+  }
+}
+@media (min-width: 2000px) or (max-height: 1100px) {
+  .bodyContacto .main {
+    height: auto;
+  }
+}
+@media (max-height: 767px) {
+  .bodyInicioSesion .main {
+    height: auto;
+  }
+  .bodyInicio .main, .bodyContacto .main {
+    height: auto;
+    display: block;
+  }
+  .seccion2 {
+    height: auto;
+  }
+}
+@media (max-width: 767px) and (max-height: 950px) {
+  .bodyInicio .main, .bodyClases .main, .bodyContacto .main {
+    height: auto;
+  }
+}

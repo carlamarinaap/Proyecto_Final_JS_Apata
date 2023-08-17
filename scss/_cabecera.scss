@@ -1,0 +1,25 @@
+@import 'variables';
+
+/*CABECERA*/
+
+.bodyClases, .bodyStaff, .bodySedes, .bodyContacto, .bodyInicioSesion {
+  .main {
+    .img_bodyLinks {
+      position:absolute;
+      top: 0px;
+      z-index: -10;
+      img {
+        width: 100vw;
+      }
+    }
+    .cabecera {
+      position: relative;
+      text-align: center;
+    }
+
+  }
+  h1 {
+    padding: 10vw 0;
+    font-size: 60px;
+  } 
+}

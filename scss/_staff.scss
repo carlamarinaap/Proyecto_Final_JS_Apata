@@ -1,0 +1,32 @@
+
+
+/*STAFF*/
+.staff_container{
+  overflow: hidden;
+  margin: 1.5rem auto;
+  width: 240px;
+  height: 400px;
+  .img_container {
+    position: absolute;
+    img{
+      @include bordes;
+      width: 240px;
+      aspect-ratio: 0.6;
+      object-fit: cover;
+    }
+  }
+  .tarjetaInterna {
+    @include bordes;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    position: relative;
+    transform: translateY(320px);
+    transition: all 0.3s;
+    background-color: map-get($colores, op_negro);
+    text-align: center;
+  } 
+  &:hover .tarjetaInterna {
+    transform: translateY(50px) ;
+  }
+}
+

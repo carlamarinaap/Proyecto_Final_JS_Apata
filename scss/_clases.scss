@@ -1,0 +1,33 @@
+
+.bodyClases {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.vista_mobile {
+  display: none;
+}
+
+.menu_sedes {
+  background-color: map-get($colores,negro );
+  position: sticky;
+  top: 0;
+  h3, p {
+    text-align: center;
+    color: map-get($colores,amarillo);
+   }
+  .vista_desktop {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+      li {
+        a {
+          color: map-get($colores,blanco);
+        }
+      }
+    }
+}
+

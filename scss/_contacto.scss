@@ -1,0 +1,26 @@
+
+.bodyContacto {
+  height: 100vh;
+  .main {
+    height: 90vh;
+  }
+}
+.comentarios {
+  width: 50%;
+  margin: 0 auto;
+}
+.oficinas {
+  padding: 1rem;
+  width: 50%;
+  margin: 2rem auto;
+  @include bordes;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    li {
+      text-align: center;
+    }
+  }
+}
+  

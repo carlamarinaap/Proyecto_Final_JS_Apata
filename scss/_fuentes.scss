@@ -1,0 +1,18 @@
+
+
+/*FUENTES Y TAMAÑOS*/
+
+h1 {
+  font-size: calc(4rem + 2.2vw );
+}
+h2 {
+  font-size: calc(1.325rem + 2.5vw);
+}
+ h1, h2, h3, button, a {
+  text-align: center;
+  @include fuente("Frijole", 200);
+  span {
+    @include fuente("Frijole", 200);
+  }
+}
+

@@ -1,0 +1,32 @@
+
+
+/*GENERAL*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  @include fuente("Coda", 200);
+  color: map-get($colores, blanco );
+  outline: none;
+  transition: outline 0.2s;
+  &:focus-visible {
+    outline: 3px solid map-get($colores, amarillo);
+  }
+}
+body {
+  background-color:  map-get($colores, negro );
+}
+
+li {
+  a { 
+    text-decoration: none;
+    i { 
+      transform: scale(1);
+      transition: all 0.2s;
+    }
+  }
+  &:hover i {
+    transform: scale(1.15);
+  }
+}

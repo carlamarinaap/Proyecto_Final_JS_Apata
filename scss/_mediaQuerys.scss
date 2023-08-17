@@ -1,0 +1,164 @@
+@media (max-width: 767px) {
+
+  /*GENERAL*/
+  .bodyInicio,
+  .bg_img {
+    background-image: none;
+    border: none;
+  }
+  .img_bodyLinks {
+    display: none;
+  }
+  .bodyInicio, .bodyClases {
+    .main {
+      height: auto;
+    }
+  }
+  /*HEADER*/
+  .navbar-nav {
+    li {
+      margin: 1rem;
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+  /*INDEX*/
+  .seccion1 {
+    h1 {
+      display: none;
+    }
+  }
+  .bodyInicio {
+    .main {
+      display: block;
+    }
+  }
+  /*CLASES*/
+  .clases {
+    display: none;
+  }    
+  .bodyClases {
+    .main {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .menu_sedes {
+    h3, .vista_desktop {
+      display: none;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .vista_mobile {
+    animation: desplazo 1s ease;
+    display: flex;
+    padding: 0px;
+    list-style: none;
+    flex-direction: column;
+    text-align: center;
+    li {
+      padding: 3rem 0px;
+      a {
+        font-size: 30px;
+        color: map-get($colores, blanco);
+      }
+    }
+  }
+  @keyframes desplazo {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  /*STAFF*/
+  .staff_container {
+    @include bordes;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    .img_container{
+      align-self: center;
+      position: static;
+      height: 350px;
+      img {
+        width: 200px;
+        border: none;
+      }
+    }
+    .tarjetaInterna {
+      height: auto;
+      transform:none;
+      border: none;
+      span {
+        display: none;
+      }
+    }
+      &:hover .tarjetaInterna {
+        transform: none ;
+      }
+  }
+
+  /*CONTACTO*/
+  .comentarios {
+    width: 80%;
+  }
+  .oficinas {
+    width: 80vw;
+    ul {
+      flex-direction: column;
+    }
+  }
+  /*INICIO SESION*/
+  .bodyInicioSesion {
+      .cabecera {
+        margin-bottom: 10vh;
+      }
+    .form_inicioSesion {
+      width: 75vw;        
+    }
+  }
+}
+
+@media (min-width: 2000px) or (max-height: 1100px) {
+  .bodyContacto {
+    .main {
+      height: auto;
+    }
+  } 
+}
+
+@media (max-height: 767px) {
+  .bodyInicioSesion {
+    .main {
+      height: auto;
+    }
+  }
+  .bodyInicio, .bodyContacto {
+    .main {
+      height: auto;
+      display: block;
+    }
+  }
+  .seccion2 {
+    height: auto;
+  }
+}
+@media (max-width: 767px) and (max-height: 950px) {
+  .bodyInicio, .bodyClases, .bodyContacto {
+    .main {
+      height: auto;
+    }
+  }
+}

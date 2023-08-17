@@ -1,0 +1,28 @@
+/*MIXINS*/
+
+@mixin fuente($nombre, $weight) {
+  font-family: $nombre, cursive;
+  font-weight: $weight;
+}
+@mixin bordes {
+  border-radius: 0.3rem;
+  border: 1px solid map-get($colores, blanco);
+}
+@mixin img_background ($url){
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@mixin inputs {
+  background-color: map-get($colores, op_blanco);
+  color: map-get($colores, blanco);
+  outline: none;
+  transition: all 0.2s;
+}
+@mixin para_sedes {
+  @include bordes;
+  background-color: map-get($colores, op_negro);
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+}
