@@ -6,11 +6,11 @@ const sluis = document.querySelector('#sanluis')
 const tBody = document.querySelector('tbody')
 // Declaracion de funciones
 const onClickHandler = (e) => {
-  todasLasTablas = document.querySelector('.activa')
+  todasLasTablas = document.querySelector('.activada')
   todasLasTablas.setAttribute('class', 'd-none')
   const sedeId = e.target.id;
   const tabla = document.querySelector(`#t${sedeId}`)
-  tabla.setAttribute('class', 'pt-5 text-center activa')
+  tabla.setAttribute('class', 'pt-5 text-center activada')
 }
 
 bsas.addEventListener('click',onClickHandler);
