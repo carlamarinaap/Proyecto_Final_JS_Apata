@@ -27,18 +27,20 @@ function validarDatos(evt) {
   } else if (evt.target.contrasena.value !== evt.target.confirmacion.value){
     info.innerHTML = `<p class='text-danger'>Las contraseñas no coinciden</p>`;
   } else {
+    info.innerHTML = ''; 
     let cliente ={
       'nombre': evt.target.nombre.value,
       'correo': evt.target.correo.value,
       'genero': evt.target.genero.value,
       'contrasena': evt.target.confirmacion.value
     };
-      localStorage.setItem(evt.target.correo.value, JSON.stringify(cliente));
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'El usuario se ha registrado con éxito. Ahora debe iniciar sesión para acceder a su plan',
-      })
+    localStorage.setItem(evt.target.correo.value, JSON.stringify(cliente));
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'El usuario se ha registrado con éxito. Ahora debe iniciar sesión para acceder a su plan',
+    })
+    form.reset();
   }
 }
 

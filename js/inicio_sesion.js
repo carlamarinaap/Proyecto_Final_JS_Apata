@@ -7,6 +7,8 @@ let correoSesion = document.querySelector('#correoSesion')
 let datos = document.querySelector("#datos");
 let listado = document.querySelector('#listado')
 let logo = document.querySelector('#logo')
+let botonIniciarSesion = document.querySelector('#iniciarSesion')
+let botonRegistrarse = document.querySelector('#registrarse')
 
 //Declaracion de Funciones
 function submitHandler(evt) {
@@ -29,23 +31,25 @@ function validarDatos(evt) {
     info.innerHTML = `<p class='text-danger'>Correo no regisgtrado o incorrecto</p>`
   }
     else {
-    let persona = JSON.parse(localStorage.getItem(evt.target.correo.value))
-    if (persona.contrasena == evt.target.contrasena.value) {
-      sessionStorage.setItem(persona.correo, JSON.stringify(persona))
-      form.setAttribute('class', 'd-none');
-      sesionIniciada.removeAttribute('class');
-      saludar(persona)
-      if(persona.imc) {
-        datos.setAttribute('class','d-none')
-        recomendacion(persona);
+      let persona = JSON.parse(localStorage.getItem(evt.target.correo.value))
+      if (persona.contrasena == evt.target.contrasena.value) {
+        botonIniciarSesion.setAttribute('class', 'd-none')
+        botonRegistrarse.setAttribute('class', 'd-none')
+        sessionStorage.setItem(persona.correo, JSON.stringify(persona))
+        form.setAttribute('class', 'd-none');
+        sesionIniciada.removeAttribute('class');
+        saludar(persona)
+        if(persona.imc) {
+          datos.setAttribute('class','d-none')
+          recomendacion(persona);
+        } else {
+          correoSesion.setAttribute('value',JSON.parse(sessionStorage.getItem(persona.correo)).correo) 
+          datos.addEventListener('submit', agregarDatos)
+        }
       } else {
-        correoSesion.setAttribute('value',JSON.parse(sessionStorage.getItem(persona.correo)).correo) 
-        datos.addEventListener('submit', agregarDatos)
+        info.innerHTML = `<p class='text-danger'>Contraseña incorrecta</p>`;
       }
-    } else {
-      info.innerHTML = `<p class='text-danger'>Contraseña incorrecta</p>`;
     }
-  }
 }
 
 function saludar(persona) {
@@ -119,6 +123,8 @@ function agregarDatos(evt) {
 }
 
 function cerrarSesion() {
+  botonIniciarSesion.setAttribute('class', 'btn btn-sm btn-outline-warning')
+  botonRegistrarse.setAttribute('class', 'btn btn-sm btn-warning mx-1')
   sessionStorage.clear()
 }
 // Eventos

@@ -7,7 +7,7 @@ const cargarStaff = async (eleccion) => {
   const peticion = await fetch('../data/staff.json');
   const data = await peticion.json();
   const todos = data.map(profe => crearCard(profe)).join('');
-  const seleccion = data.filter((elegido) => elegido.id.includes(eleccion));
+  const seleccion = data.filter(elegido => elegido.id.includes(eleccion));
   const filtro = seleccion.map(profe => crearCard(profe)).join('');
   
   eleccion ? listaProfesores.innerHTML = filtro : listaProfesores.innerHTML = todos

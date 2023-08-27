@@ -95,12 +95,20 @@
       <!--Inicio de principal-->
       <section class="container">
         <div class="menu_sedes">
-          <h3>Sedes</h3>
-          <ul class="vista_desktop">
-            <li><a href="#buenosaires">Buenos Aires</a></li>
-            <li><a href="#santafe">Santa Fe</a></li>
-            <li><a href="#mendoza">Mendoza</a></li>
-            <li><a href="#sanluis">San Luis</a></li>
+          <h3>Elegí la sede</h3>
+          <ul class="vista_desktop mt-5">
+            <li>
+              <button class="btn btn-close-white" id="buenosaires">Buenos Aires</button>
+            </li>
+            <li>
+              <button class="btn btn-close-white" id="santafe">Santa Fe</button>
+            </li>
+            <li>
+              <button class="btn btn-close-white" id="mendoza">Mendoza</button>
+            </li>
+            <li>
+              <button class="btn btn-close-white" id="sanluis">San Luis</button>
+            </li>
           </ul>
           <p class="d-md-none">Tocá sobre cada sede para descargar tu grilla de clases</p>
           <ul class="vista_mobile">
@@ -118,10 +126,8 @@
             </li>
           </ul>
         </div>
-        <div class="clases container" id="clasesContainer"></div>
-        <div class="clases container">
-          <div id="buenosaires" class="pt-md-5"></div>
-          <div class="pt-5 text-center">
+        <div class="clases container" id="clasesContainer">
+          <div id="tbuenosaires" class="d-none">
             <h3 class="text-warning fs-1">Buenos Aires</h3>
             <table class="border table">
               <tr>
@@ -136,12 +142,12 @@
               </tr>
               <tr>
                 <th scope="row">10:00</th>
-                <td>Spinning</td>
-                <td>Natación Nivel 1</td>
-                <td>Spinning</td>
-                <td>Natación Nivel 1</td>
-                <td>Spinning</td>
-                <td>Elongación</td>
+                <td>Judo</td>
+                <td>Hatha Yoga</td>
+                <td>Judo</td>
+                <td>Hatha Yoga</td>
+                <td>Judo</td>
+                <td>Patín Artístico</td>
                 <td>-</td>
               </tr>
               <tr>
@@ -176,12 +182,12 @@
               </tr>
               <tr>
                 <th scope="row">14:00</th>
-                <td>Judo</td>
-                <td>Hatha Yoga</td>
-                <td>Judo</td>
-                <td>Hatha Yoga</td>
-                <td>Judo</td>
-                <td>Patín Artístico</td>
+                <td>Spinning</td>
+                <td>Natación Nivel 1</td>
+                <td>Spinning</td>
+                <td>Natación Nivel 1</td>
+                <td>Spinning</td>
+                <td>Elongación</td>
                 <td>-</td>
               </tr>
               <tr>
@@ -229,8 +235,7 @@
               <a href="#clases" class="volver text-warning">Volver</a>
             </div>
           </div>
-          <div id="santafe" class="pt-md-5"></div>
-          <div class="pt-5 text-center">
+          <div id="tsantafe" class="d-none">
             <h3 class="text-warning fs-1">Santa Fe</h3>
             <table class="border table">
               <tr>
@@ -245,22 +250,22 @@
               </tr>
               <tr>
                 <th scope="row">10:00</th>
-                <td>Spinning</td>
-                <td>Natación Nivel 1</td>
-                <td>Spinning</td>
-                <td>Natación Nivel 1</td>
-                <td>Spinning</td>
-                <td>Elongación</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <th scope="row">11:00</th>
                 <td>Funcional</td>
                 <td>Natación Nivel 2</td>
                 <td>Funcional</td>
                 <td>Natación Nivel 2</td>
                 <td>Funcional</td>
                 <td>Hatha Yoga</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th scope="row">11:00</th>
+                <td>Spinning</td>
+                <td>Natación Nivel 1</td>
+                <td>Spinning</td>
+                <td>Natación Nivel 1</td>
+                <td>Spinning</td>
+                <td>Elongación</td>
                 <td>-</td>
               </tr>
               <tr>
@@ -275,22 +280,22 @@
               </tr>
               <tr>
                 <th scope="row">13:00</th>
-                <td>Ashtanga Yoga</td>
-                <td>Elongación</td>
-                <td>Ashtanga Yoga</td>
-                <td>Elongación</td>
-                <td>Ashtanga Yoga</td>
-                <td>Danza Urbana</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <th scope="row">14:00</th>
                 <td>Judo</td>
                 <td>Hatha Yoga</td>
                 <td>Judo</td>
                 <td>Hatha Yoga</td>
                 <td>Judo</td>
                 <td>Patín Artístico</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th scope="row">14:00</th>
+                <td>Ashtanga Yoga</td>
+                <td>Elongación</td>
+                <td>Ashtanga Yoga</td>
+                <td>Elongación</td>
+                <td>Ashtanga Yoga</td>
+                <td>Danza Urbana</td>
                 <td>-</td>
               </tr>
               <tr>
@@ -338,8 +343,7 @@
               <a href="#clases" class="volver text-warning">Volver</a>
             </div>
           </div>
-          <div id="mendoza" class="pt-md-5"></div>
-          <div class="pt-5 text-center">
+          <div id="tmendoza" class="d-none">
             <h3 class="text-warning fs-1">Mendoza</h3>
             <table class="border table">
               <tr>
@@ -447,8 +451,7 @@
               <a href="#clases" class="volver text-warning">Volver</a>
             </div>
           </div>
-          <div id="sanluis" class="pt-md-5"></div>
-          <div class="pt-5 text-center">
+          <div id="tsanluis" class="d-none">
             <h3 class="text-warning fs-1">San Luis</h3>
             <table class="border table">
               <tr>
@@ -513,16 +516,6 @@
               </tr>
               <tr>
                 <th scope="row">15:00</th>
-                <td>Natación Nivel 1</td>
-                <td>Danza Urbana</td>
-                <td>Natación Nivel 1</td>
-                <td>Danza Urbana</td>
-                <td>Natación Nivel 1</td>
-                <td>-</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <th scope="row">16:00</th>
                 <td>Natación Nivel 2</td>
                 <td>Karate</td>
                 <td>Natación Nivel 2</td>
@@ -532,22 +525,33 @@
                 <td>-</td>
               </tr>
               <tr>
+                <th scope="row">16:00</th>
+
+                <td>Natación Nivel 1</td>
+                <td>Danza Urbana</td>
+                <td>Natación Nivel 1</td>
+                <td>Danza Urbana</td>
+                <td>Natación Nivel 1</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
                 <th scope="row">17:00</th>
-                <td>Funcional</td>
-                <td>Patín Artístico</td>
-                <td>Funcional</td>
-                <td>Patín Artístico</td>
-                <td>Funcional</td>
+                <td>Voley</td>
+                <td>Basquet</td>
+                <td>Voley</td>
+                <td>Basquet</td>
+                <td>Voley</td>
                 <td>-</td>
                 <td>-</td>
               </tr>
               <tr>
                 <th scope="row">18:00</th>
-                <td>Voley</td>
-                <td>Basquet</td>
-                <td>Voley</td>
-                <td>Basquet</td>
-                <td>Voley</td>
+                <td>Funcional</td>
+                <td>Patín Artístico</td>
+                <td>Funcional</td>
+                <td>Patín Artístico</td>
+                <td>Funcional</td>
                 <td>-</td>
                 <td>-</td>
               </tr>
@@ -598,5 +602,6 @@
       </div>
     </footer>
     <!--Fin de Footer-->
+    <script src="../js/clases.js"></script>
   </body>
 </html>
